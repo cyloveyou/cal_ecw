@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -L/user/local/lib CMakeFiles/test_libxl.dir/test_libxl.cpp.o -o test_libxl   -L/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/libxl/lib64  -Wl,-rpath,/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/libxl/lib64 -lxl 

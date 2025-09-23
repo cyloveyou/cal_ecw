@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>LibXL: Table class reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+  <meta name="description" content="Table class reference. LibXL is a C++ library for direct reading and writing of Excel files (xls, xlsx).
+" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+  <link rel="stylesheet" type="text/css" href="style.css" />  
+   </head>
+ <body>  
+  <table id="container" cellspacing="6">  
+   <tr>
+ <td id="header">
+  <a href="home.html" title="Home">  <img src="images/logo.png" style="float:left; margin-left:2em; border:none;" 
+       alt="LibXL - direct reading and writing Excel files" />
+  </a>  <div style="margin-left:13em; margin-top:2em">
+   <span id="title">LibXL</span>
+   <div id="subtitle">C++ API reference version 4.6.0</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td valign="top" width="100%">
+  <div id="content">
+  <div><a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a><br/>
+  <a href="coreProperties.html">CoreProperties</a>&nbsp;<b>Table</b></div>  
+<h3>Table class reference</h3>
+
+<ul class="doc"> 
+ <li>
+   <a name="title"></a><span class="keyword">const wchar_t</span>* <span class="fname">name</span>() <span class="keyword">const</span>   <div>Returns the name of the table.</div>
+ </li>    
+ <li>
+   <a name="setTitle"></a><span class="keyword">void</span> <span class="fname">setName</span>(<span class="keyword">const wchar_t</span>* name)   <div>Sets the name of the table.</div>
+ </li> 
+  <li>
+   <a name="ref"></a><span class="keyword">const wchar_t</span>* <span class="fname">ref</span>() <span class="keyword">const</span>   <div>Returns the range on the sheet for this table.</div>
+ </li> 
+   
+ <li>
+   <a name="setRef"></a><span class="keyword">void</span> <span class="fname">setRef</span>(<span class="keyword">const wchar_t</span>* ref)   <div>Sets the range on the sheet for this table.</div>
+ </li> 
+  <li>
+   <a name="autoFilter"></a><a href="autoFilter.html">AutoFilter</a>* <span class="fname">autoFilter</span>()   <div>Returns the AutoFilter of the table.
+</div>
+ </li> 
+ <li>
+   <a name="style"></a>TableStyle <span class="fname">style</span>() <span class="keyword">const</span>   <div>Returns the table style.</div>
+ </li> 
+   
+ <li>
+   <a name="setStyle"></a><span class="keyword">void</span> <span class="fname">setStyle</span>(TableStyle tableStyle)   <div>Sets the table style.
+   <table class="helptable"> 
+    <thead>
+     <tr><td>TableStyle value</td><td>View</td><td>TableStyle value</td><td>View</td></tr> 
+    </thead>
+    <tr><td>TABLESTYLE_NONE</td><td><img src="images/tablestyle_none.png" alt="TABLESTYLE_NONE" style="border:none;" /></td><td>TABLESTYLE_MEDIUM10</td><td><img src="images/tablestyle_medium10.png" alt="TABLESTYLE_MEDIUM10" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT1</td><td><img src="images/tablestyle_light1.png" alt="TABLESTYLE_LIGHT1" style="border:none;" /></td><td>TABLESTYLE_MEDIUM11</td><td><img src="images/tablestyle_medium11.png" alt="TABLESTYLE_MEDIUM11" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT2</td><td><img src="images/tablestyle_light2.png" alt="TABLESTYLE_LIGHT2" style="border:none;" /></td><td>TABLESTYLE_MEDIUM12</td><td><img src="images/tablestyle_medium12.png" alt="TABLESTYLE_MEDIUM12" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT3</td><td><img src="images/tablestyle_light3.png" alt="TABLESTYLE_LIGHT3" style="border:none;" /></td><td>TABLESTYLE_MEDIUM13</td><td><img src="images/tablestyle_medium13.png" alt="TABLESTYLE_MEDIUM13" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT4</td><td><img src="images/tablestyle_light4.png" alt="TABLESTYLE_LIGHT4" style="border:none;" /></td><td>TABLESTYLE_MEDIUM14</td><td><img src="images/tablestyle_medium14.png" alt="TABLESTYLE_MEDIUM14" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT5</td><td><img src="images/tablestyle_light5.png" alt="TABLESTYLE_LIGHT5" style="border:none;" /></td><td>TABLESTYLE_MEDIUM15</td><td><img src="images/tablestyle_medium15.png" alt="TABLESTYLE_MEDIUM15" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT6</td><td><img src="images/tablestyle_light6.png" alt="TABLESTYLE_LIGHT6" style="border:none;" /></td><td>TABLESTYLE_MEDIUM16</td><td><img src="images/tablestyle_medium16.png" alt="TABLESTYLE_MEDIUM16" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT7</td><td><img src="images/tablestyle_light7.png" alt="TABLESTYLE_LIGHT7" style="border:none;" /></td><td>TABLESTYLE_MEDIUM17</td><td><img src="images/tablestyle_medium17.png" alt="TABLESTYLE_MEDIUM17" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT8</td><td><img src="images/tablestyle_light8.png" alt="TABLESTYLE_LIGHT8" style="border:none;" /></td><td>TABLESTYLE_MEDIUM18</td><td><img src="images/tablestyle_medium18.png" alt="TABLESTYLE_MEDIUM18" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT9</td><td><img src="images/tablestyle_light9.png" alt="TABLESTYLE_LIGHT9" style="border:none;" /></td><td>TABLESTYLE_MEDIUM19</td><td><img src="images/tablestyle_medium19.png" alt="TABLESTYLE_MEDIUM19" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT10</td><td><img src="images/tablestyle_light10.png" alt="TABLESTYLE_LIGHT10" style="border:none;" /></td><td>TABLESTYLE_MEDIUM20</td><td><img src="images/tablestyle_medium20.png" alt="TABLESTYLE_MEDIUM20" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT11</td><td><img src="images/tablestyle_light11.png" alt="TABLESTYLE_LIGHT11" style="border:none;" /></td><td>TABLESTYLE_MEDIUM21</td><td><img src="images/tablestyle_medium21.png" alt="TABLESTYLE_MEDIUM21" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT12</td><td><img src="images/tablestyle_light12.png" alt="TABLESTYLE_LIGHT12" style="border:none;" /></td><td>TABLESTYLE_MEDIUM22</td><td><img src="images/tablestyle_medium22.png" alt="TABLESTYLE_MEDIUM22" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT13</td><td><img src="images/tablestyle_light13.png" alt="TABLESTYLE_LIGHT13" style="border:none;" /></td><td>TABLESTYLE_MEDIUM23</td><td><img src="images/tablestyle_medium23.png" alt="TABLESTYLE_MEDIUM23" style="border:none;" /></td></tr> 
+
+    <tr><td>TABLESTYLE_LIGHT14</td><td><img src="images/tablestyle_light14.png" alt="TABLESTYLE_LIGHT14" style="border:none;" /></td><td>TABLESTYLE_MEDIUM24</td><td><img src="images/tablestyle_medium24.png" alt="TABLESTYLE_MEDIUM24" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT15</td><td><img src="images/tablestyle_light15.png" alt="TABLESTYLE_LIGHT15" style="border:none;" /></td><td>TABLESTYLE_MEDIUM25</td><td><img src="images/tablestyle_medium25.png" alt="TABLESTYLE_MEDIUM25" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT16</td><td><img src="images/tablestyle_light16.png" alt="TABLESTYLE_LIGHT16" style="border:none;" /></td><td>TABLESTYLE_MEDIUM26</td><td><img src="images/tablestyle_medium26.png" alt="TABLESTYLE_MEDIUM26" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT17</td><td><img src="images/tablestyle_light17.png" alt="TABLESTYLE_LIGHT17" style="border:none;" /></td><td>TABLESTYLE_MEDIUM27</td><td><img src="images/tablestyle_medium27.png" alt="TABLESTYLE_MEDIUM27" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT18</td><td><img src="images/tablestyle_light18.png" alt="TABLESTYLE_LIGHT18" style="border:none;" /></td><td>TABLESTYLE_MEDIUM28</td><td><img src="images/tablestyle_medium28.png" alt="TABLESTYLE_MEDIUM28" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT19</td><td><img src="images/tablestyle_light19.png" alt="TABLESTYLE_LIGHT19" style="border:none;" /></td><td>TABLESTYLE_DARK1</td><td><img src="images/tablestyle_dark1.png" alt="TABLESTYLE_DARK1" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT20</td><td><img src="images/tablestyle_light20.png" alt="TABLESTYLE_LIGHT20" style="border:none;" /></td><td>TABLESTYLE_DARK2</td><td><img src="images/tablestyle_dark2.png" alt="TABLESTYLE_DARK2" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_LIGHT21</td><td><img src="images/tablestyle_light21.png" alt="TABLESTYLE_LIGHT21" style="border:none;" /></td><td>TABLESTYLE_DARK3</td><td><img src="images/tablestyle_dark3.png" alt="TABLESTYLE_DARK3" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM1</td><td><img src="images/tablestyle_medium1.png" alt="TABLESTYLE_MEDIUM1" style="border:none;" /></td><td>TABLESTYLE_DARK4</td><td><img src="images/tablestyle_dark4.png" alt="TABLESTYLE_DARK4" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM2</td><td><img src="images/tablestyle_medium2.png" alt="TABLESTYLE_MEDIUM2" style="border:none;" /></td><td>TABLESTYLE_DARK5</td><td><img src="images/tablestyle_dark5.png" alt="TABLESTYLE_DARK5" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM3</td><td><img src="images/tablestyle_medium3.png" alt="TABLESTYLE_MEDIUM3" style="border:none;" /></td><td>TABLESTYLE_DARK6</td><td><img src="images/tablestyle_dark6.png" alt="TABLESTYLE_DARK6" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM4</td><td><img src="images/tablestyle_medium4.png" alt="TABLESTYLE_MEDIUM4" style="border:none;" /></td><td>TABLESTYLE_DARK7</td><td><img src="images/tablestyle_dark7.png" alt="TABLESTYLE_DARK7" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM5</td><td><img src="images/tablestyle_medium5.png" alt="TABLESTYLE_MEDIUM5" style="border:none;" /></td><td>TABLESTYLE_DARK8</td><td><img src="images/tablestyle_dark8.png" alt="TABLESTYLE_DARK8" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM6</td><td><img src="images/tablestyle_medium6.png" alt="TABLESTYLE_MEDIUM6" style="border:none;" /></td><td>TABLESTYLE_DARK9</td><td><img src="images/tablestyle_dark9.png" alt="TABLESTYLE_DARK9" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM7</td><td><img src="images/tablestyle_medium7.png" alt="TABLESTYLE_MEDIUM7" style="border:none;" /></td><td>TABLESTYLE_DARK10</td><td><img src="images/tablestyle_dark10.png" alt="TABLESTYLE_DARK10" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM8</td><td><img src="images/tablestyle_medium8.png" alt="TABLESTYLE_MEDIUM8" style="border:none;" /></td><td>TABLESTYLE_DARK11</td><td><img src="images/tablestyle_dark11.png" alt="TABLESTYLE_DARK11" style="border:none;" /></td></tr> 
+    <tr><td>TABLESTYLE_MEDIUM9</td><td><img src="images/tablestyle_medium9.png" alt="TABLESTYLE_MEDIUM9" style="border:none;" /></td><td></td><td></td></tr> 
+   </table> 
+</div>
+ </li> 
+  <li>
+   <a name="showRowStripes"></a><span class="keyword">bool</span> <span class="fname">showRowStripes</span>() <span class="keyword">const</span>   <div>Returns whether row stripe formatting is applied.
+</div>
+ </li> 
+   
+ <li>
+   <a name="setShowRowStripes"></a><span class="keyword">void</span> <span class="fname">setShowRowStripes</span>(<span class="keyword">bool</span> showRowStripes = <span class="keyword">true</span>)   <div>Turns on/off row stripe formatting.
+</div>
+ </li> 
+  <li>
+   <a name="showColumnStripes"></a><span class="keyword">bool</span> <span class="fname">showColumnStripes</span>() <span class="keyword">const</span>   <div>Returns whether column stripe formatting is applied.
+</div>
+ </li> 
+   
+ <li>
+   <a name="setShowColumnStripes"></a><span class="keyword">void</span> <span class="fname">setShowColumnStripes</span>(<span class="keyword">bool</span> showColumnStripes = <span class="keyword">true</span>)   <div>Turns on/off column stripe formatting.
+</div>
+ </li> 
+  <li>
+   <a name="showFirstColumn"></a><span class="keyword">bool</span> <span class="fname">showFirstColumn</span>() <span class="keyword">const</span>   <div>Returns whether the first column in the table should have the style applied.
+
+</div>
+ </li> 
+   
+ <li>
+   <a name="setShowFirstColumn"></a><span class="keyword">void</span> <span class="fname">setShowFirstColumn</span>(<span class="keyword">bool</span> showFirstColumn = <span class="keyword">true</span>)   <div>Sets whether the first column in the table should have the style applied.
+
+</div>
+ </li> 
+  <li>
+   <a name="showLastColumn"></a><span class="keyword">bool</span> <span class="fname">showLastColumn</span>() <span class="keyword">const</span>   <div>Returns whether the last column in the table should have the style applied.
+
+</div>
+ </li> 
+   
+ <li>
+   <a name="setShowLastColumn"></a><span class="keyword">void</span> <span class="fname">setShowLastColumn</span>(<span class="keyword">bool</span> showLastColumn = <span class="keyword">true</span>)   <div>Sets whether the last column in the table should have the style applied.
+
+</div>
+ </li> 
+  <li>
+   <a name="columnSize"></a><span class="keyword">int</span> <span class="fname">columnSize</span>() <span class="keyword">const</span>   <div>Returns the number of columns in the table.</div>
+ </li> 
+ <li>
+   <a name="columnName"></a><span class="keyword">const wchar_t</span>* <span class="fname">columnName</span>(<span class="keyword">int</span> columnIndex) <span class="keyword">const</span>   <div>Returns the unique name of the table column with the specified index.</div>
+ </li> 
+ <li>
+   <a name="setColumnName"></a><span class="keyword">bool</span> <span class="fname">setColumnName</span>(<span class="keyword">int</span> columnIndex, <span class="keyword">const wchar_t</span>* name)   <div>Sets the unique name of the table column with the specified index. Please note that if you write the name of the column with the <a href="spreadsheet.html#writeStr">Sheet::writeStr()</a>, 
+the workbook will be corrupted, because the <a href="spreadsheet.html#writeStr">Sheet::writeStr()</a> doesn't check if the specified cell belongs to a table.</div>
+ </li> 
+</ul>
+<div class="blinks">
+<a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a><br/>
+      <a href="coreProperties.html">CoreProperties</a>&nbsp;<b>Table</b></div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td id="footer">&copy; 2008 - 2025 XLware. All rights reserved.</td>
+</tr>
+  </table>
+ </body>
+</html>

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -I/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/libxl/include_cpp -g -o CMakeFiles/test_libxl.dir/test_libxl.cpp.o -c /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/test_libxl.cpp",
+  "file": "/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/test_libxl.cpp"
+}
+]

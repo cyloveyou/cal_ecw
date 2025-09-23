@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>LibXL: CoreProperties class reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+  <meta name="description" content="CoreProperties class reference. LibXL is a C++ library for direct reading and writing of Excel files (xls, xlsx).
+" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+  <link rel="stylesheet" type="text/css" href="style.css" />  
+   </head>
+ <body>  
+  <table id="container" cellspacing="6">  
+   <tr>
+ <td id="header">
+  <a href="home.html" title="Home">  <img src="images/logo.png" style="float:left; margin-left:2em; border:none;" 
+       alt="LibXL - direct reading and writing Excel files" />
+  </a>  <div style="margin-left:13em; margin-top:2em">
+   <span id="title">LibXL</span>
+   <div id="subtitle">C++ API reference version 4.6.0</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td valign="top" width="100%">
+  <div id="content">
+  <div><a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a><br/>
+  <b>CoreProperties</b>&nbsp;<a href="table.html">Table</a></div>  
+
+<h3>CoreProperties class reference</h3>
+
+<ul class="doc"> 
+ <li>
+   <a name="title"></a><span class="keyword">const wchar_t</span>* <span class="fname">title</span>() <span class="keyword">const</span>   <div>Returns the &quot;title&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setTitle"></a><span class="keyword">void</span> <span class="fname">setTitle</span>(<span class="keyword">const wchar_t</span>* title)   <div>Sets the &quot;title&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="subject"></a><span class="keyword">const wchar_t</span>* <span class="fname">subject</span>() <span class="keyword">const</span>   <div>Returns the &quot;subject&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setSubject"></a><span class="keyword">void</span> <span class="fname">setSubject</span>(<span class="keyword">const wchar_t</span>* subject)   <div>Sets the &quot;subject&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="creator"></a><span class="keyword">const wchar_t</span>* <span class="fname">creator</span>() <span class="keyword">const</span>   <div>Returns the &quot;creator&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setCreator"></a><span class="keyword">void</span> <span class="fname">setCreator</span>(<span class="keyword">const wchar_t</span>* creator)   <div>Sets the &quot;creator&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="lastModifiedBy"></a><span class="keyword">const wchar_t</span>* <span class="fname">lastModifiedBy</span>() <span class="keyword">const</span>   <div>Returns the &quot;lastModifiedBy&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setLastModifiedBy"></a><span class="keyword">void</span> <span class="fname">setLastModifiedBy</span>(<span class="keyword">const wchar_t</span>* lastModifiedBy)   <div>Sets the &quot;setLastModifiedBy&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="created"></a><span class="keyword">const wchar_t</span>* <span class="fname">created</span>() <span class="keyword">const</span>   <div>Returns the &quot;created&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setCreated"></a><span class="keyword">void</span> <span class="fname">setCreated</span>(<span class="keyword">const wchar_t</span>* created)   <div>Sets the &quot;created&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="createdAsDouble"></a><span class="keyword">double</span> <span class="fname">createdAsDouble</span>() <span class="keyword">const</span>   <div>Returns the &quot;created&quot; property of the workbook. Use the <a href="workbook.html#dateUnpack">Book::dateUnpack()</a> for extract date/time parts from double.</div>
+ </li> 
+   
+ <li>
+   <a name="setCreatedAsDouble"></a><span class="keyword">void</span> <span class="fname">setCreatedAsDouble</span>(<span class="keyword">double</span> created)   <div>Sets the &quot;created&quot; property of the workbook. Use the <a href="workbook.html#datePack">Book::datePack()</a> for packing date/time parts to double. </div>
+ </li> 
+  <li>
+   <a name="modified"></a><span class="keyword">const wchar_t</span>* <span class="fname">modified</span>() <span class="keyword">const</span>   <div>Returns the &quot;modified&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setModified"></a><span class="keyword">void</span> <span class="fname">setModified</span>(<span class="keyword">const wchar_t</span>* modified)   <div>Sets the &quot;modified&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="modifiedAsDouble"></a><span class="keyword">double</span> <span class="fname">modifiedAsDouble</span>() <span class="keyword">const</span>   <div>Returns the &quot;modified&quot; property of the workbook. Use the <a href="workbook.html#dateUnpack">Book::dateUnpack()</a> for extract date/time parts from double.</div>
+ </li> 
+   
+ <li>
+   <a name="setModifiedAsDouble"></a><span class="keyword">void</span> <span class="fname">setModifiedAsDouble</span>(<span class="keyword">double</span> modified)   <div>Sets the &quot;modified&quot; property of the workbook. Use the <a href="workbook.html#datePack">Book::datePack()</a> for packing date/time parts to double. </div>
+ </li> 
+  <li>
+   <a name="tags"></a><span class="keyword">const wchar_t</span>* <span class="fname">tags</span>() <span class="keyword">const</span>   <div>Returns the &quot;tags&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setTags"></a><span class="keyword">void</span> <span class="fname">setTags</span>(<span class="keyword">const wchar_t</span>* tags)   <div>Sets the &quot;tags&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="categories"></a><span class="keyword">const wchar_t</span>* <span class="fname">categories</span>() <span class="keyword">const</span>   <div>Returns the &quot;categories&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setCategories"></a><span class="keyword">void</span> <span class="fname">setCategories</span>(<span class="keyword">const wchar_t</span>* categories)   <div>Sets the &quot;categories&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="comments"></a><span class="keyword">const wchar_t</span>* <span class="fname">comments</span>() <span class="keyword">const</span>   <div>Returns the &quot;comments&quot; property of the workbook.</div>
+ </li> 
+   
+ <li>
+   <a name="setComments"></a><span class="keyword">void</span> <span class="fname">setComments</span>(<span class="keyword">const wchar_t</span>* comments)   <div>Sets the &quot;comments&quot; property of the workbook.</div>
+ </li> 
+  <li>
+   <a name="removeAll"></a><span class="keyword">void</span> <span class="fname">removeAll</span>()   <div>Remove all workbook properties.</div>
+ </li> 
+</ul>
+
+<div class="blinks">
+<a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a><br/>
+           <b>CoreProperties</b>&nbsp;<a href="table.html">Table</a></div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td id="footer">&copy; 2008 - 2025 XLware. All rights reserved.</td>
+</tr>
+  </table>
+ </body>
+</html>
