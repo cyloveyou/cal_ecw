@@ -12,33 +12,33 @@ from matplotlib import pyplot as plt
 
 # =====>2025/09/22 21:51:48 设置全局字体大小 <=====
 # 标题
-plt.rcParams["axes.titlesize"] = 20
+plt.rcParams["axes.titlesize"] = 16
 # x轴标签
-plt.rcParams["axes.labelsize"] = 16
+plt.rcParams["axes.labelsize"] = 14
 # 刻度标签
-plt.rcParams["xtick.labelsize"] = 14
-plt.rcParams["ytick.labelsize"] = 14
+plt.rcParams["xtick.labelsize"] = 12
+plt.rcParams["ytick.labelsize"] = 12
 # 图例
-plt.rcParams["legend.fontsize"] = 14
+plt.rcParams["legend.fontsize"] = 12
 
 
 # =====>2025/09/22 20:49:27 从xls文件中读取光谱响应函数 <=====
 def read_spec_from_xls(file_path, sheet_name=0):
     df = pd.read_excel(file_path, sheet_name=sheet_name, header=1)
-    wave = df.iloc[:, 0].values
+    freq = df.iloc[:, 0].values
     amp = df.iloc[:, 1].values
-    return wave, amp
+    return freq, amp
 
 
 # =====>2025/09/22 20:49:08 绘制光谱响应函数图像 <=====
 def plot_spectrum(
-    wave, amp, title="Spectrum", ecl=None, lwave=None, rwave=None, save_path=None
+    freq, amp, title="Spectrum", ecl=None, lfreq=None, rfreq=None, save_path=None
 ):
     xlabel = "Wavelength (nm)"
-    ylabel = "srf"
+    ylabel = "Amplitude"
 
     plt.figure(figsize=(8, 6))
-    plt.plot(wave, amp)
+    plt.plot(freq, amp)
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -47,11 +47,11 @@ def plot_spectrum(
     if ecl:
         plt.axvline(x=ecl, color="r", linestyle="--", label=f"ecl: {ecl:.2f} nm")
         plt.legend()
-    if lwave:
-        plt.axvline(x=lwave, color="g", linestyle="-", label=f"Lwave: {lwave:.2f} nm")
+    if lfreq:
+        plt.axvline(x=lfreq, color="g", linestyle="-", label=f"LFreq: {lfreq:.2f} nm")
         plt.legend()
-    if rwave:
-        plt.axvline(x=rwave, color="b", linestyle="-", label=f"Rwave: {rwave:.2f} nm")
+    if rfreq:
+        plt.axvline(x=rfreq, color="b", linestyle="-", label=f"RFreq: {rfreq:.2f} nm")
         plt.legend()
     if save_path:
         plt.savefig(save_path, dpi=600, bbox_inches="tight")
@@ -60,40 +60,40 @@ def plot_spectrum(
 
 
 # =====>2025/09/22 21:06:15 计算等效中心频率 <=====
-def cal_ecl(wave, amp):
+def cal_ecl(freq, amp):
     # 计算全部积分
-    sum_amp = np.trapz(amp, x=wave)
+    sum_amp = np.trapz(amp, x=freq)
     sum_amp_2 = sum_amp / 2
 
     # 二分法 迭代求解积分中点
     tmp_amp = -1
-    lwave = wave[0]
-    rwave = wave[-1]
-    tmp_wave = (lwave + rwave) / 2
+    lfreq = freq[0]
+    rfreq = freq[-1]
+    tmp_freq = (lfreq + rfreq) / 2
     while True:
         # 计算当前频率下的积分
-        tmp_amp = np.trapz(amp[wave <= tmp_wave], x=wave[wave <= tmp_wave])
+        tmp_amp = np.trapz(amp[freq <= tmp_freq], x=freq[freq <= tmp_freq])
 
         plot_spectrum(
-            wave,
+            freq,
             amp,
             title="Spectrum",
-            ecl=tmp_wave,
-            lwave=lwave,
-            rwave=rwave,
-            save_path=f"pic/ecl_{tmp_wave:.2f}.png",
+            ecl=tmp_freq,
+            lfreq=lfreq,
+            rfreq=rfreq,
+            save_path=f"pic/ecl_{tmp_freq:.2f}.png",
         )
         # 判断是否达到目标积分
         if abs(tmp_amp - sum_amp_2) < 1:
             break
         # 如果当前积分小于目标积分，向右移动
         elif tmp_amp < sum_amp_2:
-            lwave = tmp_wave
-            tmp_wave = (tmp_wave + rwave) / 2
+            lfreq = tmp_freq
+            tmp_freq = (tmp_freq + rfreq) / 2
         # 否则向左移动
         else:
-            rwave = tmp_wave
-            tmp_wave = (lwave + tmp_wave) / 2
+            rfreq = tmp_freq
+            tmp_freq = (lfreq + tmp_freq) / 2
 
-    ecl = tmp_wave
+    ecl = tmp_freq
     return ecl
