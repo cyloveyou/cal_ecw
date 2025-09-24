@@ -1,18 +1,18 @@
 {
-	"version": "0.2.0",
-	"configurations": [
-		// ...existing code...
-		{
-			"name": "Debug test_libxl",
-			"type": "cppdbg",
-			"request": "launch",
-			"program": "${workspaceFolder}/build/test_libxl",
-			"args": [],
-			"stopAtEntry": false,
-			"cwd": "${workspaceFolder}/build",
-			"environment": [],
-			"externalConsole": false,
-			"MIMode": "gdb"
-		}
-	]
+    "version": "0.2.0",
+    "configurations": [
+        // ...existing code...
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/main_ecl",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb"
+        }
+    ]
 }

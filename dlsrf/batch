@@ -1,0 +1,8 @@
+# 批量下载
+cat srf_download | parallel -j 8 wget -c {}
+
+# 批量解压
+ls *.tar.gz | xargs -i tar -xvzf {}
+
+# 输出卫星名称
+ls | awk -F"_" '{print $2}' |sort | uniq

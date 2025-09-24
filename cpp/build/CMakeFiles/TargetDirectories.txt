@@ -1,3 +1,4 @@
-/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles/test_libxl.dir
+/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles/lib_ecl.dir
+/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles/main_ecl.dir
 /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles/edit_cache.dir
 /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles/rebuild_cache.dir

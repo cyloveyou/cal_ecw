@@ -1,0 +1,1 @@
+double trapz(vector<double> y, vector<double> x) {

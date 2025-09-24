@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "main_ecl",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lib_ecl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lib_ecl-Debug-7df8e9a6d42b3ae6d03d.json",
+					"name" : "lib_ecl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_ecl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_ecl-Debug-78bb214d1ea27cf79604.json",
+					"name" : "main_ecl",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build",
+		"source" : "/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

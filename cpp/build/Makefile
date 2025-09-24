@@ -117,41 +117,78 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_libxl
+# Target rules for targets named lib_ecl
 
 # Build rule for target.
-test_libxl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_libxl
-.PHONY : test_libxl
+lib_ecl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib_ecl
+.PHONY : lib_ecl
 
 # fast build rule for target.
-test_libxl/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_libxl.dir/build.make CMakeFiles/test_libxl.dir/build
-.PHONY : test_libxl/fast
+lib_ecl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/build
+.PHONY : lib_ecl/fast
 
-test_libxl.o: test_libxl.cpp.o
-.PHONY : test_libxl.o
+#=============================================================================
+# Target rules for targets named main_ecl
+
+# Build rule for target.
+main_ecl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_ecl
+.PHONY : main_ecl
+
+# fast build rule for target.
+main_ecl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/build
+.PHONY : main_ecl/fast
+
+lib_ecl.o: lib_ecl.cpp.o
+.PHONY : lib_ecl.o
 
 # target to build an object file
-test_libxl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_libxl.dir/build.make CMakeFiles/test_libxl.dir/test_libxl.cpp.o
-.PHONY : test_libxl.cpp.o
+lib_ecl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/lib_ecl.cpp.o
+.PHONY : lib_ecl.cpp.o
 
-test_libxl.i: test_libxl.cpp.i
-.PHONY : test_libxl.i
+lib_ecl.i: lib_ecl.cpp.i
+.PHONY : lib_ecl.i
 
 # target to preprocess a source file
-test_libxl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_libxl.dir/build.make CMakeFiles/test_libxl.dir/test_libxl.cpp.i
-.PHONY : test_libxl.cpp.i
+lib_ecl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/lib_ecl.cpp.i
+.PHONY : lib_ecl.cpp.i
 
-test_libxl.s: test_libxl.cpp.s
-.PHONY : test_libxl.s
+lib_ecl.s: lib_ecl.cpp.s
+.PHONY : lib_ecl.s
 
 # target to generate assembly for a file
-test_libxl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_libxl.dir/build.make CMakeFiles/test_libxl.dir/test_libxl.cpp.s
-.PHONY : test_libxl.cpp.s
+lib_ecl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/lib_ecl.cpp.s
+.PHONY : lib_ecl.cpp.s
+
+main_ecl.o: main_ecl.cpp.o
+.PHONY : main_ecl.o
+
+# target to build an object file
+main_ecl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/main_ecl.cpp.o
+.PHONY : main_ecl.cpp.o
+
+main_ecl.i: main_ecl.cpp.i
+.PHONY : main_ecl.i
+
+# target to preprocess a source file
+main_ecl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/main_ecl.cpp.i
+.PHONY : main_ecl.cpp.i
+
+main_ecl.s: main_ecl.cpp.s
+.PHONY : main_ecl.s
+
+# target to generate assembly for a file
+main_ecl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/main_ecl.cpp.s
+.PHONY : main_ecl.cpp.s
 
 # Help Target
 help:
@@ -161,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_libxl"
-	@echo "... test_libxl.o"
-	@echo "... test_libxl.i"
-	@echo "... test_libxl.s"
+	@echo "... lib_ecl"
+	@echo "... main_ecl"
+	@echo "... lib_ecl.o"
+	@echo "... lib_ecl.i"
+	@echo "... lib_ecl.s"
+	@echo "... main_ecl.o"
+	@echo "... main_ecl.i"
+	@echo "... main_ecl.s"
 .PHONY : help
 
 

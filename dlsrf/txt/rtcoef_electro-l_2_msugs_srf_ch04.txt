@@ -1,0 +1,15 @@
+4,   ELECTRO-L N2 MSU-GS channel 4 SRF from file MSU-GS_SRFs.txt received November 2019 from NWPSAF helpdesk
+Number of data points:
+11
+Wavenumber (cm-1)   Filter response
+     2272.727300       0.023000
+     2325.581400       0.210000
+     2380.952400       0.490000
+     2439.024400       0.902000
+     2500.000000       1.000000
+     2564.102600       0.961000
+     2631.578900       0.889000
+     2702.702700       0.766000
+     2777.777800       0.617000
+     2857.142900       0.198000
+     2941.176500       0.016000

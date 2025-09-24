@@ -1,0 +1,21 @@
+#include "lib_ecl.h"
+using namespace std;
+
+void testlibecl()
+{
+    vector<double> x = {1, 2, 3, 4, 5};
+    vector<double> y = {0, 1, 1, 1, 0};
+
+    cout << trapz(y, x) << endl;
+}
+
+int main()
+{
+    string path = "../../srf_data/rtcoef_sentinel3_1_olci_srf_ch01.txt";
+    vector<double> wave;
+    vector<double> srf;
+    read_srf_data(path, wave, srf);
+    double ecl = cal_ecl(wave, srf);
+    cout << fixed << setprecision(15) << ecl << endl;
+    return 0;
+}

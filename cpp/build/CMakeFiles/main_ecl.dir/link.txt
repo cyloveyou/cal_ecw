@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -L/user/local/lib CMakeFiles/main_ecl.dir/main_ecl.cpp.o -o main_ecl  -Wl,-rpath,/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build liblib_ecl.so 

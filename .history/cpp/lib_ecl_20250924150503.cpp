@@ -1,0 +1,25 @@
+#include "lib_ecl.h"
+
+double trapz(std::vector<double> y, std::vector<double> x) {
+  double integral = 0.0;
+  for (size_t i = 1; i < y.size(); ++i) {
+    integral += 0.5 * (y[i] + y[i - 1]) * (x[i] - x[i - 1]);
+  }
+  return integral;
+}
+
+bool readexcel(const char *path) {
+  std::vector<double> x, y;
+  std::vector<std::string> bandname;
+  Book *book = xlCreateBook();
+  if (book->load(path)) {
+    Sheet *sheet = book->getSheet(0);
+    if (sheet) {
+      const char *s = sheet->readStr(2, 1);
+      if (s)
+        std::cout << "Cell (2,1): " << s << std::endl;
+    }
+  }
+  book->release();
+  return true;
+}
