@@ -34,7 +34,6 @@ def spiderhref(url, pattern=None, attrs={}):
 
 
 if __name__ == "__main__":
-
     url = "https://nwp-saf.eumetsat.int/site/software/rttov/download/coefficients/spectral-response-functions/"
     urllist = spiderhref(url, "srf.html")
     rooturl = r"https://nwp-saf.eumetsat.int/downloads/rtcoef_info/visir_srf"

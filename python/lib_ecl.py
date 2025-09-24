@@ -57,13 +57,13 @@ def plot_spectrum(
 
     if ecl:
         plt.axvline(x=ecl, color="r", linestyle="--", label=f"ecl: {ecl:.2f} nm")
-        plt.legend()
+        plt.legend(loc="upper right")
     if lwave:
         plt.axvline(x=lwave, color="g", linestyle="-", label=f"Lwave: {lwave:.2f} nm")
-        plt.legend()
+        plt.legend(loc="upper right")
     if rwave:
         plt.axvline(x=rwave, color="b", linestyle="-", label=f"Rwave: {rwave:.2f} nm")
-        plt.legend()
+        plt.legend(loc="upper right")
     if save_path:
         if not os.path.exists(os.path.dirname(save_path)):
             os.makedirs(os.path.dirname(save_path))
@@ -88,6 +88,7 @@ def cal_ecl(wave, srf):
         # 计算当前频率下的积分
         tmp_srf = np.trapz(srf[wave <= tmp_wave], x=wave[wave <= tmp_wave])
 
+        # ******************************
         # print("tmp_wave:", tmp_wave, " tmp_srf:", tmp_srf, " sum_srf_2:", sum_srf_2)
         # plot_spectrum(
         #     wave,
@@ -98,8 +99,9 @@ def cal_ecl(wave, srf):
         #     rwave=rwave,
         #     save_path=f"pic/ecl_{tmp_wave:.2f}.png",
         # )
+        # ******************************
+
         # 判断是否达到目标积分
-        # print("tmp_wave:", tmp_wave, " tmp_srf:", tmp_srf, " sum_srf_2:", sum_srf_2)
         if abs(rwave - lwave) < 1:
             break
         # 如果当前积分小于目标积分，向右移动

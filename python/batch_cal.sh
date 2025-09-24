@@ -4,6 +4,11 @@
 # @CSDN    :https://blog.csdn.net/weixin_64989228?type=blog
 # @File    :batch_cal.sh
 
-files=`find ../srf_data -type f -name "*land*.txt"`
+# 列出所有srf文件
+files=`find ../srf_data -type f -name "*.txt"`
 
+# # 筛选landsat系列
+# files=`find ../srf_data -type f -name "*land*.txt"`
+
+# 使用GNU Parallel并行计算
 parallel --line-buffer python main_ecl.py {} ::: $files

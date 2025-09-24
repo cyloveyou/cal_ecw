@@ -9,20 +9,21 @@ from lib_ecl import *
 import sys
 
 
-def main(file_path="../srf_data/rtcoef_sentinel3_1_olci_srf_ch01.txt"):
+def main(file_path="../srf_data/rtcoef_landsat_8_oli_srf_ch02.txt"):
     print("input_file:", file_path)
-    title_head = file_path.split("/")[-1].split(".")[0]
     wave, srf_data = read_srf_file(file_path)
-
     ecl = cal_ecl(wave, srf_data)
     print(ecl)
-    plot_spectrum(
-        wave,
-        srf_data,
-        title=f"{title_head}",
-        ecl=ecl,
-        save_path=f"res/{title_head}.png",
-    )
+
+    # =====> 绘图 <=====
+    # title_head = file_path.split("/")[-1].split(".")[0]
+    # plot_spectrum(
+    #     wave,
+    #     srf_data,
+    #     title=f"{title_head}",
+    #     ecl=ecl,
+    #     save_path=f"res/{title_head}.png",
+    # )
 
 
 # =====>2025/09/22 21:04:20 主函数 <=====
