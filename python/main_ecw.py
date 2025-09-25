@@ -15,15 +15,15 @@ def main(file_path="../srf_data/rtcoef_landsat_8_oli_srf_ch02.txt"):
     ecw = cal_ecw(wave, srf_data)
     print(ecw)
 
-    # # =====> 绘图 <=====
-    # title_head = file_path.split("/")[-1].split(".")[0]
-    # plot_spectrum(
-    #     wave,
-    #     srf_data,
-    #     title=f"{title_head}",
-    #     ecw=ecw,
-    #     # save_path=f"res/{title_head}.png",
-    # )
+    # =====> 绘图 <=====
+    title_head = file_path.split("/")[-1].split(".")[0]
+    plot_spectrum(
+        wave,
+        srf_data,
+        title=f"{title_head}",
+        ecw=ecw,
+        save_path=f"res/{title_head}.png",
+    )
 
 
 # =====>2025/09/22 21:04:20 主函数 <=====

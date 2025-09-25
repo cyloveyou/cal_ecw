@@ -15,14 +15,14 @@ import re
 
 # =====>2025/09/22 21:51:48 设置绘图属性 <=====
 # 标题
-mpl.rcParams["axes.titlesize"] = 20
+mpl.rcParams["axes.titlesize"] = 30
 # x轴标签
-mpl.rcParams["axes.labelsize"] = 16
+mpl.rcParams["axes.labelsize"] = 25
 # 刻度标签
-mpl.rcParams["xtick.labelsize"] = 14
-mpl.rcParams["ytick.labelsize"] = 14
+mpl.rcParams["xtick.labelsize"] = 20
+mpl.rcParams["ytick.labelsize"] = 20
 # 图例
-mpl.rcParams["legend.fontsize"] = 14
+mpl.rcParams["legend.fontsize"] = 16
 # 支持中文
 config = {
     "font.family": "serif",  # 设置衬线字体
