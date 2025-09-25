@@ -1,3 +1,9 @@
+/**
+ * @Time    :2025/09/24 23:55:10
+ * @Author  :小 y 同 学
+ * @公众号   :小y只会写bug
+ * @CSDN    :https://blog.csdn.net/weixin_64989228?type=blog
+ */
 #include <fstream>
 #include <sstream>
 #include <iostream>
