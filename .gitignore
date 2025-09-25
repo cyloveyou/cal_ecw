@@ -1,4 +1,4 @@
-*.history
-*.vscode
-./cpp/build
-./python/__pycache__
+**/.history
+**/.vscode
+**/cpp/build/
+**/python/__pycache__/
