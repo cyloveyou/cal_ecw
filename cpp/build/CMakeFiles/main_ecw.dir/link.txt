@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -L/user/local/lib CMakeFiles/main_ecw.dir/main_ecw.cpp.o -o main_ecw  -Wl,-rpath,/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build liblib_ecw.so 

@@ -11,4 +11,4 @@ files=`find ../srf_data -type f -name "*.txt"`
 # files=`find ../srf_data -type f -name "*land*.txt"`
 
 # 使用GNU Parallel并行计算
-parallel --line-buffer python main_ecl.py {} ::: $files
+parallel --line-buffer python main_ecw.py {} ::: $files

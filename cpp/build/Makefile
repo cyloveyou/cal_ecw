@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp
+CMAKE_SOURCE_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build
+CMAKE_BINARY_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,78 +117,78 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lib_ecl
+# Target rules for targets named lib_ecw
 
 # Build rule for target.
-lib_ecl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib_ecl
-.PHONY : lib_ecl
+lib_ecw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib_ecw
+.PHONY : lib_ecw
 
 # fast build rule for target.
-lib_ecl/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/build
-.PHONY : lib_ecl/fast
+lib_ecw/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/build
+.PHONY : lib_ecw/fast
 
 #=============================================================================
-# Target rules for targets named main_ecl
+# Target rules for targets named main_ecw
 
 # Build rule for target.
-main_ecl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_ecl
-.PHONY : main_ecl
+main_ecw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_ecw
+.PHONY : main_ecw
 
 # fast build rule for target.
-main_ecl/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/build
-.PHONY : main_ecl/fast
+main_ecw/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/build
+.PHONY : main_ecw/fast
 
-lib_ecl.o: lib_ecl.cpp.o
-.PHONY : lib_ecl.o
-
-# target to build an object file
-lib_ecl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/lib_ecl.cpp.o
-.PHONY : lib_ecl.cpp.o
-
-lib_ecl.i: lib_ecl.cpp.i
-.PHONY : lib_ecl.i
-
-# target to preprocess a source file
-lib_ecl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/lib_ecl.cpp.i
-.PHONY : lib_ecl.cpp.i
-
-lib_ecl.s: lib_ecl.cpp.s
-.PHONY : lib_ecl.s
-
-# target to generate assembly for a file
-lib_ecl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/lib_ecl.cpp.s
-.PHONY : lib_ecl.cpp.s
-
-main_ecl.o: main_ecl.cpp.o
-.PHONY : main_ecl.o
+lib_ecw.o: lib_ecw.cpp.o
+.PHONY : lib_ecw.o
 
 # target to build an object file
-main_ecl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/main_ecl.cpp.o
-.PHONY : main_ecl.cpp.o
+lib_ecw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/lib_ecw.cpp.o
+.PHONY : lib_ecw.cpp.o
 
-main_ecl.i: main_ecl.cpp.i
-.PHONY : main_ecl.i
+lib_ecw.i: lib_ecw.cpp.i
+.PHONY : lib_ecw.i
 
 # target to preprocess a source file
-main_ecl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/main_ecl.cpp.i
-.PHONY : main_ecl.cpp.i
+lib_ecw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/lib_ecw.cpp.i
+.PHONY : lib_ecw.cpp.i
 
-main_ecl.s: main_ecl.cpp.s
-.PHONY : main_ecl.s
+lib_ecw.s: lib_ecw.cpp.s
+.PHONY : lib_ecw.s
 
 # target to generate assembly for a file
-main_ecl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/main_ecl.cpp.s
-.PHONY : main_ecl.cpp.s
+lib_ecw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/lib_ecw.cpp.s
+.PHONY : lib_ecw.cpp.s
+
+main_ecw.o: main_ecw.cpp.o
+.PHONY : main_ecw.o
+
+# target to build an object file
+main_ecw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/main_ecw.cpp.o
+.PHONY : main_ecw.cpp.o
+
+main_ecw.i: main_ecw.cpp.i
+.PHONY : main_ecw.i
+
+# target to preprocess a source file
+main_ecw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/main_ecw.cpp.i
+.PHONY : main_ecw.cpp.i
+
+main_ecw.s: main_ecw.cpp.s
+.PHONY : main_ecw.s
+
+# target to generate assembly for a file
+main_ecw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/main_ecw.cpp.s
+.PHONY : main_ecw.cpp.s
 
 # Help Target
 help:
@@ -198,14 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lib_ecl"
-	@echo "... main_ecl"
-	@echo "... lib_ecl.o"
-	@echo "... lib_ecl.i"
-	@echo "... lib_ecl.s"
-	@echo "... main_ecl.o"
-	@echo "... main_ecl.i"
-	@echo "... main_ecl.s"
+	@echo "... lib_ecw"
+	@echo "... main_ecw"
+	@echo "... lib_ecw.o"
+	@echo "... lib_ecw.i"
+	@echo "... lib_ecw.s"
+	@echo "... main_ecw.o"
+	@echo "... main_ecw.i"
+	@echo "... main_ecw.s"
 .PHONY : help
 
 

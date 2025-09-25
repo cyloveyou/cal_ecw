@@ -54,17 +54,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp
+CMAKE_SOURCE_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build
+CMAKE_BINARY_DIR = /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lib_ecl.dir/all
-all: CMakeFiles/main_ecl.dir/all
+all: CMakeFiles/lib_ecw.dir/all
+all: CMakeFiles/main_ecw.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,61 +72,61 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lib_ecl.dir/clean
-clean: CMakeFiles/main_ecl.dir/clean
+clean: CMakeFiles/lib_ecw.dir/clean
+clean: CMakeFiles/main_ecw.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lib_ecl.dir
+# Target rules for target CMakeFiles/lib_ecw.dir
 
 # All Build rule for target.
-CMakeFiles/lib_ecl.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles --progress-num=1,2 "Built target lib_ecl"
-.PHONY : CMakeFiles/lib_ecl.dir/all
+CMakeFiles/lib_ecw.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles --progress-num=1,2 "Built target lib_ecw"
+.PHONY : CMakeFiles/lib_ecw.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lib_ecl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lib_ecl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/lib_ecl.dir/rule
+CMakeFiles/lib_ecw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lib_ecw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/lib_ecw.dir/rule
 
 # Convenience name for target.
-lib_ecl: CMakeFiles/lib_ecl.dir/rule
-.PHONY : lib_ecl
+lib_ecw: CMakeFiles/lib_ecw.dir/rule
+.PHONY : lib_ecw
 
 # clean rule for target.
-CMakeFiles/lib_ecl.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecl.dir/build.make CMakeFiles/lib_ecl.dir/clean
-.PHONY : CMakeFiles/lib_ecl.dir/clean
+CMakeFiles/lib_ecw.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_ecw.dir/build.make CMakeFiles/lib_ecw.dir/clean
+.PHONY : CMakeFiles/lib_ecw.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main_ecl.dir
+# Target rules for target CMakeFiles/main_ecw.dir
 
 # All Build rule for target.
-CMakeFiles/main_ecl.dir/all: CMakeFiles/lib_ecl.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles --progress-num=3,4 "Built target main_ecl"
-.PHONY : CMakeFiles/main_ecl.dir/all
+CMakeFiles/main_ecw.dir/all: CMakeFiles/lib_ecw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles --progress-num=3,4 "Built target main_ecw"
+.PHONY : CMakeFiles/main_ecw.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main_ecl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main_ecl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/main_ecl.dir/rule
+CMakeFiles/main_ecw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main_ecw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/main_ecw.dir/rule
 
 # Convenience name for target.
-main_ecl: CMakeFiles/main_ecl.dir/rule
-.PHONY : main_ecl
+main_ecw: CMakeFiles/main_ecw.dir/rule
+.PHONY : main_ecw
 
 # clean rule for target.
-CMakeFiles/main_ecl.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecl.dir/build.make CMakeFiles/main_ecl.dir/clean
-.PHONY : CMakeFiles/main_ecl.dir/clean
+CMakeFiles/main_ecw.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_ecw.dir/build.make CMakeFiles/main_ecw.dir/clean
+.PHONY : CMakeFiles/main_ecw.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

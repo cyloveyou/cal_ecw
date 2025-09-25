@@ -118,6 +118,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/lib_ecl.dir/DependInfo.cmake"
-  "CMakeFiles/main_ecl.dir/DependInfo.cmake"
+  "CMakeFiles/lib_ecw.dir/DependInfo.cmake"
+  "CMakeFiles/main_ecw.dir/DependInfo.cmake"
   )

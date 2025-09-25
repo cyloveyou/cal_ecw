@@ -1,4 +1,4 @@
-# Install script for directory: /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp
+# Install script for directory: /media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/xytx/FILEdata/xytxFiles/A2025/Course/Hyperspectral/cal_ecl/cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

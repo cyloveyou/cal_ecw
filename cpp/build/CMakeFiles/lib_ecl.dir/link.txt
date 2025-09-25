@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -L/user/local/lib -shared -Wl,-soname,liblib_ecl.so -o liblib_ecl.so CMakeFiles/lib_ecl.dir/lib_ecl.cpp.o 
