@@ -15,7 +15,7 @@ def main(file_path="../srf_data/rtcoef_landsat_8_oli_srf_ch02.txt"):
     ecw = cal_ecw(wave, srf_data)
     print(ecw)
 
-    # =====> 绘图 <=====
+    # # =====> 绘图 <=====
     # title_head = file_path.split("/")[-1].split(".")[0]
     # plot_spectrum(
     #     wave,
