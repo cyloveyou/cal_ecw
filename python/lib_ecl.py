@@ -8,20 +8,21 @@
 
 import numpy as np
 import pandas as pd
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
+import matplotlib as mpl
 import os
 import re
 
-# =====>2025/09/22 21:51:48 设置全局字体大小 <=====
+# =====>2025/09/22 21:51:48 设置绘图属性 <=====
 # 标题
-plt.rcParams["axes.titlesize"] = 20
+mpl.rcParams["axes.titlesize"] = 20
 # x轴标签
-plt.rcParams["axes.labelsize"] = 16
+mpl.rcParams["axes.labelsize"] = 16
 # 刻度标签
-plt.rcParams["xtick.labelsize"] = 14
-plt.rcParams["ytick.labelsize"] = 14
+mpl.rcParams["xtick.labelsize"] = 14
+mpl.rcParams["ytick.labelsize"] = 14
 # 图例
-plt.rcParams["legend.fontsize"] = 14
+mpl.rcParams["legend.fontsize"] = 14
 # 支持中文
 config = {
     "font.family": "serif",  # 设置衬线字体
@@ -29,7 +30,7 @@ config = {
     "mathtext.fontset": "stix",  # 设置数学字体，用作英文字体
     "axes.unicode_minus": False,
 }
-plt.rcParams.update(config)
+mpl.rcParams.update(config)
 
 
 # =====>2025/09/22 20:49:27 从srf文件中读取光谱响应函数 <=====
@@ -48,6 +49,7 @@ def plot_spectrum(
     xlabel = "Wavelength (nm)"
     ylabel = "srf"
 
+    # =====> 绘图 <=====
     plt.figure(figsize=(8, 6))
     plt.plot(wave, srf)
     plt.title(title)
@@ -55,15 +57,16 @@ def plot_spectrum(
     plt.ylabel(ylabel)
     plt.grid()
 
+    # =====> 绘制竖线 <=====
     if ecl:
         plt.axvline(x=ecl, color="r", linestyle="--", label=f"ecl: {ecl:.2f} nm")
-        plt.legend(loc="upper right")
     if lwave:
         plt.axvline(x=lwave, color="g", linestyle="-", label=f"Lwave: {lwave:.2f} nm")
-        plt.legend(loc="upper right")
     if rwave:
         plt.axvline(x=rwave, color="b", linestyle="-", label=f"Rwave: {rwave:.2f} nm")
-        plt.legend(loc="upper right")
+    plt.legend(loc="upper right")
+
+    # =====> 保存图片 <=====
     if save_path:
         if not os.path.exists(os.path.dirname(save_path)):
             os.makedirs(os.path.dirname(save_path))
@@ -89,16 +92,16 @@ def cal_ecl(wave, srf):
         tmp_srf = np.trapz(srf[wave <= tmp_wave], x=wave[wave <= tmp_wave])
 
         # ******************************
-        # print("tmp_wave:", tmp_wave, " tmp_srf:", tmp_srf, " sum_srf_2:", sum_srf_2)
-        # plot_spectrum(
-        #     wave,
-        #     srf,
-        #     title="Spectrum",
-        #     ecl=tmp_wave,
-        #     lwave=lwave,
-        #     rwave=rwave,
-        #     save_path=f"pic/ecl_{tmp_wave:.2f}.png",
-        # )
+        print("tmp_wave:", tmp_wave, " tmp_srf:", tmp_srf, " sum_srf_2:", sum_srf_2)
+        plot_spectrum(
+            wave,
+            srf,
+            title="Spectrum",
+            ecl=tmp_wave,
+            lwave=lwave,
+            rwave=rwave,
+            # save_path=f"pic/ecl_{tmp_wave:.2f}.png",
+        )
         # ******************************
 
         # 判断是否达到目标积分
