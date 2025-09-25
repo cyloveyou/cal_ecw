@@ -37,7 +37,7 @@ mpl.rcParams.update(config)
 def read_srf_file(file_path):
     data = np.loadtxt(file_path, skiprows=4)  # 跳过前4行
     wave = data[:, 0]
-    wave_nm = 1 / wave * 1e7  # cm-1 转 nm
+    wave_nm = 1 / wave * 1e7  # 将波长单位从 cm-1 转 nm
     srf_data = data[:, 1]
     return wave_nm, srf_data
 
@@ -78,7 +78,7 @@ def plot_spectrum(
 
 # =====>2025/09/22 21:06:15 计算等效中心频率 <=====
 def cal_ecl(wave, srf):
-    # 计算全部积分
+    # 计算全部积分 面积
     sum_srf = np.trapz(srf, x=wave)
     sum_srf_2 = sum_srf / 2
 
@@ -92,16 +92,16 @@ def cal_ecl(wave, srf):
         tmp_srf = np.trapz(srf[wave <= tmp_wave], x=wave[wave <= tmp_wave])
 
         # ******************************
-        print("tmp_wave:", tmp_wave, " tmp_srf:", tmp_srf, " sum_srf_2:", sum_srf_2)
-        plot_spectrum(
-            wave,
-            srf,
-            title="Spectrum",
-            ecl=tmp_wave,
-            lwave=lwave,
-            rwave=rwave,
-            # save_path=f"pic/ecl_{tmp_wave:.2f}.png",
-        )
+        # print("tmp_wave:", tmp_wave, " tmp_srf:", tmp_srf, " sum_srf_2:", sum_srf_2)
+        # plot_spectrum(
+        #     wave,
+        #     srf,
+        #     title="Spectrum",
+        #     ecl=tmp_wave,
+        #     lwave=lwave,
+        #     rwave=rwave,
+        #     # save_path=f"pic/ecl_{tmp_wave:.2f}.png",
+        # )
         # ******************************
 
         # 判断是否达到目标积分

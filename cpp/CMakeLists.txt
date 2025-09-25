@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Debug or Release
 set(CMAKE_BUILD_TYPE Debug)
 
-# 库文件
+# 添加库文件
 add_library(lib_ecl SHARED lib_ecl.cpp)
 
-# 可执行文件
+# 添加可执行文件
 add_executable(main_ecl main_ecl.cpp)
 
 # 链接库文件
