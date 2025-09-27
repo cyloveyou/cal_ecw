@@ -39,7 +39,7 @@ gmt set FONT_TITLE 22p,Times-Roman,black
 
 # =====> 开始绘图 <=====
 gmt basemap $region -JX15c/9c -Bxag+l"wavelength (nm)" -Byag+l"relative response" \
-    -BWSne+t"$mapfile"-BWSrt
+    -BWSrt+t"$mapfile"
 gmt plot ${mapfile}_data.tmp -W1.5p,blue
 
 # 绘制竖线

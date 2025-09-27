@@ -13,5 +13,5 @@ files=`find ../srf_data -type f -name "*land*.txt"`
 # GNU parallel并行
 parallel --line-buffer ./build/main_ecw {} ::: $files
 
-# =====> 使用gmt进行出图 <=====
+# # =====> 使用gmt进行出图 <=====
 # parallel --line-buffer ./gmt_plot.sh {} ::: $files
