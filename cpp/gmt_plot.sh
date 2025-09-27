@@ -5,18 +5,18 @@
 # @File    :gmt_plot.sh 使用gmt可视化绘图
 if [ $# -eq 1 ]; then
   infile=$1
+  mapfile="$(basename $infile .txt)"
 else
   infile="../srf_data/rtcoef_landsat_8_oli_srf_ch02.txt"
+  mapfile="tmp"
 fi
 
-mapfile="$(basename $infile .txt)"
-
 # =====> 预处理数据 <=====
+# 提取数据，转换波长单位为nm
 tail -n +5 $infile | awk '{print (1/$1)*1e7, $2}'>${mapfile}_data.tmp
-# 获取当前图的范围
+# 获取数据的范围
 region=$(gmt info -I- ${mapfile}_data.tmp)
-
-# 提取y轴范围
+# 获取y轴范围
 ymin=$(echo $region | cut -d'/' -f3 | sed 's/R//')
 ymax=$(echo $region | cut -d'/' -f4)
 # =====> 计算ecw <=====
@@ -25,7 +25,6 @@ ecw=$(echo $cppres | awk '{print $3}')
 
 # =====> gmt绘图 <=====
 gmt begin gmt_res/$mapfile png A+m0.2c,E720
-
 # =====> 设置基础参数 <=====
 # 设置标注字体
 gmt set FONT_ANNOT_PRIMARY 18p,Times-Roman,black
@@ -38,6 +37,7 @@ gmt set MAP_FRAME_PEN 0.75p,black
 # 设置标题字体
 gmt set FONT_TITLE 22p,Times-Roman,black
 
+# =====> 开始绘图 <=====
 gmt basemap $region -JX15c/9c -Bxag+l"wavelength (nm)" -Byag+l"relative response" \
     -BWSne+t"$mapfile"-BWSrt
 gmt plot ${mapfile}_data.tmp -W1.5p,blue
