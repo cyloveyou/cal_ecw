@@ -6,5 +6,12 @@
 
 # 列出所有srf文件
 files=`ls ../srf_data/*.txt`
+
+# 筛选landsat系列
+files=`find ../srf_data -type f -name "*land*.txt"`
+
 # GNU parallel并行
 parallel --line-buffer ./build/main_ecw {} ::: $files
+
+# =====> 使用gmt进行出图 <=====
+# parallel --line-buffer ./gmt_plot.sh {} ::: $files
