@@ -76,7 +76,7 @@ def plot_spectrum(
     plt.close()
 
 
-# =====>2025/09/22 21:06:15 计算等效中心频率 <=====
+# =====>2025/09/22 21:06:15 计算等效中心波长 <=====
 def cal_ecw(wave, srf):
     # 计算全部积分 面积
     sum_srf = np.trapz(srf, x=wave)
@@ -88,7 +88,7 @@ def cal_ecw(wave, srf):
     rwave = wave[-1]
     tmp_wave = (lwave + rwave) / 2
     while True:
-        # 计算当前频率下的积分
+        # 计算当前波长下的积分
         tmp_srf = np.trapz(srf[wave <= tmp_wave], x=wave[wave <= tmp_wave])
 
         # ******************************
