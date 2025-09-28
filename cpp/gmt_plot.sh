@@ -13,7 +13,7 @@ fi
 
 # =====> 预处理数据 <=====
 # 提取数据，转换波长单位为nm
-tail -n +5 $infile | awk '{print (1/$1)*1e7, $2}' >${mapfile}_data.tmp
+tail -n +5 $infile | awk '{print (1.0/$1)*1e7, $2}' >${mapfile}_data.tmp
 # 获取数据的范围
 region=$(gmt info -I- ${mapfile}_data.tmp)
 # 获取y轴范围
