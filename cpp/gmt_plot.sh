@@ -13,7 +13,7 @@ fi
 
 # =====> 预处理数据 <=====
 # 提取数据，转换波长单位为nm
-tail -n +5 $infile | awk '{print (1/$1)*1e7, $2}'>${mapfile}_data.tmp
+tail -n +5 $infile | awk '{print (1/$1)*1e7, $2}' >${mapfile}_data.tmp
 # 获取数据的范围
 region=$(gmt info -I- ${mapfile}_data.tmp)
 # 获取y轴范围
@@ -39,12 +39,12 @@ gmt set FONT_TITLE 22p,Times-Roman,black
 
 # =====> 开始绘图 <=====
 gmt basemap $region -JX15c/9c -Bxag+l"wavelength (nm)" -Byag+l"relative response" \
-    -BWSrt+t"$mapfile"
+  -BWSrt+t"$mapfile"
 gmt plot ${mapfile}_data.tmp -W1.5p,blue
 
 # 绘制竖线
-echo "$ecw $ymin" > ${mapfile}_line.tmp
-echo "$ecw $ymax" >> ${mapfile}_line.tmp
+echo "$ecw $ymin" >${mapfile}_line.tmp
+echo "$ecw $ymax" >>${mapfile}_line.tmp
 gmt plot ${mapfile}_line.tmp -W1p,red,--
 
 # 在图的中间位置添加文本标签
@@ -55,4 +55,5 @@ echo "$lcx $lcy x=$ecw" | gmt text -F+jBL -Gwhite -W0.5p
 # 清理临时文件
 rm -f ${mapfile}_data.tmp ${mapfile}_line.tmp
 
-gmt end 
+gmt end show
+
