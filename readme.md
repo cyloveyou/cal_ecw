@@ -1,2 +1,4 @@
 # cal_ecw
 包含批量下载光谱响应函数、二分法计算光谱等效波长的脚本（Python、C++）。
+
+欢迎你的Follow、Star&Pull requests！
